@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+<style>
+    .container { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .table{
+    padding: 1rem;
+    flex: 1 1 30%;
+    max-width: 25%;
+    height:auto;
+    border: 0.5px  solid teal;
+    border-radius: 3rem;
+        background-color: aliceblue;
+} 
+     
+    .table > h2  , .table > .orderbutton{ 
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:tomato;
+   text-shadow: 2rem;
+   color: whitesmoke;
+ font-size: x-large;
+  }
+ 
+  
+   
+   .discription , .price{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: antiquewhite;
+    padding: 1rem;
+   }
+
+
+.memebers { 
+background-image: url(/CodeSpace/webdev/cat1.webp);
+background-position:center;
+color:white;
+font-size: larger;
+padding: 0.5rem;
+} 
+
+ .header , .discription , .memebers , .orderbutton , .price { 
+
+    border-radius: 1rem 1rem;
+} 
+  
+.orderbutton:hover { 
+    background-color: navy;
+    padding: 0.2rem;
+}
+ 
+ @media screen and (max-width:680px) {
+    
+    .table{
+    padding: 1rem;
+    flex: 1 1 40%;
+    max-width: 80%;
+    height:auto;
+    border: 0.5px  solid teal;
+    border-radius: 3rem;
+        background-color: aliceblue;
+} 
+
+ }
+
+</style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="table">
+            <h2 class="header">Plan name</h2>
+            <p class="discription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempore consequuntur officiis laboriosam maiores repudiandae vitae, tenetur quaerat ipsum ullam.</p>
+            <p class="memebers">no of memebers</p>
+            <p class="price">Pricing $ </p>
+            <button class="orderbutton">Buy this plan</button>
+        </div>
+
+        <div class="table">
+            <h2 class="header">Plan name</h2>
+            <p class="discription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempore consequuntur officiis laboriosam maiores repudiandae vitae, tenetur quaerat ipsum ullam.</p>
+            <p class="memebers">no of memebers</p>
+            <p class="price">Pricing $ </p>
+            <button class="orderbutton">Buy this plan</button>
+        </div>
+        
+        <div class="table">
+            <h2 class="header">Plan name</h2>
+            <p class="discription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempore consequuntur officiis laboriosam maiores repudiandae vitae, tenetur quaerat ipsum ullam.</p>
+            <p class="memebers">no of memebers</p>
+            <p class="price">Pricing $ </p>
+            <button class="orderbutton">Buy this plan</button>        </div>
+            <div class="table">
+                <h2 class="header">Plan name</h2>
+                <p class="discription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempore consequuntur officiis laboriosam maiores repudiandae vitae, tenetur quaerat ipsum ullam.</p>
+                <p class="memebers">no of memebers</p>
+                <p class="price">Pricing $ </p>
+                <button class="orderbutton">Buy this plan</button>        </div>
+                
+        <div class="table">
+            <h2 class="header">Plan name</h2>
+            <p class="discription">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit tempore consequuntur officiis laboriosam maiores repudiandae vitae, tenetur quaerat ipsum ullam.</p>
+            <p class="memebers">no of memebers</p>
+            <p class="price">Pricing $ </p>
+            <button class="orderbutton">Buy this plan</button>        </div>
+    </div>
+
+</body>
+</html>

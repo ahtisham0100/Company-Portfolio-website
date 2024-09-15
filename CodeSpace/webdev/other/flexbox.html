@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+     
+    <style>
+        .outer { 
+            display: flex;
+            border: 2px dashed violet;
+            gap: 1rem;
+            flex-wrap: wrap;
+           justify-content: space-evenly;
+
+        }
+
+
+         .inner {
+            position: relative;
+            margin-top: 2rem;
+            background-color: aliceblue;
+            /*
+flex-shrink: 1;
+flex-shrink:1;
+flex-basis: 33.3%;  means width is 30% */
+flex: 1  1 30%;  
+
+max-width: 33.3333%;    
+        } 
+         
+    </style>
+</head>
+<body>
+ 
+    <div class="outer">
+        <div class="inner">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odio aperiam, vero pariatur quasi sapiente hic culpa, adipisci deserunt nostrum excepturi omnis provident molestiae! Esse odit earum dolores eius harum!</p>
+           </div>
+           <div class="inner">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti totam eos minus consectetur unde do loremque libero perferendis dolor expedita i repudiandae in quasi praesentium quia autem rem, ex mollitia provident.</p-788>
+           </div>
+       <div class="inner">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odio aperiam, vero pariatur quasi sapiente hic culpa, adipisci deserunt nostrum excepturi omnis provident molestiae! Esse odit earum dolores eius harum!</p>
+       </div>
+       <div class="inner">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti totam eos minus consectetur unde do loremque libero perferendis dolor expedita i repudiandae in quasi praesentium quia autem rem, ex mollitia provident.</p-788>
+       </div>
+       <div class="inner">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint nihil tempore iusto vel dolore, et nemo neque deserunt minima libero nulla commodi omnis facere provident accusantium nostrum eligendi labore aliquam!</p>
+       </div>
+       
+       <div class="inner">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum odio aperiam, vero pariatur quasi sapiente hic culpa, adipisci deserunt nostrum excepturi omnis provident molestiae! Esse odit earum dolores eius harum!</p>
+       </div>
+       <div class="inner">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti totam eos minus consectetur unde do loremque libero perferendis dolor expedita i repudiandae in quasi praesentium quia autem rem, ex mollitia provident.</p-788>
+       </div>
+  
+    </div>
+
+     
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Flag Project</title>
+  <style>
+    /* Write your CSS Code here */
+    
+    .flag{ 
+        margin-top: 5%;
+        background-color: transparent;
+        border: 2px solid black;
+   display: grid;
+margin-left: 5%;
+   width: 80%;
+    height: 500px;
+    }  
+
+    .toptext {
+        position: relative;
+        z-index: inherit;
+        left: 45%;
+    }
+      
+     .top , .lower {
+        background-color: red;
+        color: white;
+        font-size: large; 
+        height: 150px;
+     }
+
+     .mid{
+        background-color: navy; 
+height: 200px; 
+
+     } 
+.circle{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    background-color: white;
+    border-radius: 75%;
+    top: 25%;
+    left: 50%;
+
+    span{
+        display: flex;
+        color: black !important;
+        font-size: 32px;
+        justify-content: center;
+    }
+
+    
+     
+
+}
+  </style>
+</head>
+
+<!-- 
+  IMPORTANT! Do not change any HTML
+Don't add any classes/ids/elements 
+Use what you know about combining selectors 
+and CSS specificity instead.
+Hint 1: The flag is 900px by 600px and the circle is 200px by 200px.
+Hint 2: You can use CSS inspection to get the colors from
+https://appbrewery.github.io/flag-of-laos/
+-->
+
+<body>
+ <div class="flag">
+
+    <div class="top">
+  <div class="toptext"> <h1>The Flag</h1></div>         </div>
+
+    <div class="mid"> 
+        <div class="circle"> <span > of</span><span>loas</span> </div>
+    </div>
+    
+    <div class="lower"> </div>
+
+ </div>
+
+
+
+ <div class="container-sm form-container" >
+
+<form> 
+  <div class="row">
+<label for="name"  id="name" class="form-label">Name</label>
+<input type="text" id="name" placeholder="Muhammad Bilal"> 
+</div>
+<div class="row">
+<label for="Email" id="Email" class="form-label"> Email </label> 
+<input type="email" id="email" class=" form-input">
+</div>
+<div class="row">
+  <label for="Contact" id="Contact" class="form-label"> Contact Number</label> 
+  <input type="tel" id="Contact" class=" form-input" placeholder="+92 300 1234567">
+  </div>
+
+  <div class="row">
+    <label for="text" id="text" class="form-label">Write your Message </label> 
+    <textarea type="text" id="text" class=" form-input" rows="2" cols="50" required> </textarea>
+    </div>
+<div class="row">
+    <button class="send-button">Send!</button>
+</div>   
+</form>
+
+ </div>
+
+
+
+
+ <a href="float_practice.html" target="_blank"><h3>Click here to understand float </a>
+  <a href="/CodeSpace/responsive_pricingtable.html" target="_blank"><h3>Click here to open responsive pricing /h3></a>
+
+
+
+</body>
+
+</html>
