@@ -1,0 +1,184 @@
+ 
+  
+
+  .navbar{ 
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:tomato !important;
+    font-size: x-large;
+    border: 1px solid antiquewhite;
+    z-index: 1;
+border-radius: 1rem;
+
+}      
+
+
+.navbar  a {
+  color: whitesmoke;
+}
+   
+  .nav-img { 
+    border-radius: 50% ;
+    width: 7vh;
+  } 
+   
+   
+  .nav-link:hover {
+border-bottom: 5px solid black;
+background-color: #fb783c;
+color: #5c0390;
+font-weight: bolder;
+border-radius: 1rem 1rem 2rem 2rem ;
+  } 
+    
+   
+  .poster-row { 
+
+    margin-top: 5rem;
+    display: flex ;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex:2;
+    align-items: center;
+justify-content: left;
+
+
+  }  
+
+
+  
+
+  .card { 
+    margin-bottom: 2rem;
+
+  } 
+   
+
+  
+  .card-container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .list-group {
+    gap: 1rem;
+    border-radius: 5px;
+  }
+
+
+  .poster-text { 
+    color: whitesmoke;
+     position: relative;
+     width:auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+background-color: #0877ff;    
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  } 
+
+   .col > img { 
+    border-radius: 50%;
+   }
+
+
+  .highlight { 
+    color:#3c025e;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif!important;
+font-weight:bolder !important;
+  }  
+   
+
+  @media  screen and (max-width:440px ) {
+    
+  .poster-row { 
+
+    margin-top: 5rem;
+    clear: both;
+    content: "";
+    display: table;
+;
+  }  
+
+
+}   
+ 
+#education { 
+  margin-top: 8rem;
+}
+
+.education-text {
+  height: 50vh;
+  margin-top: 5rem;
+  color:#FB773C;
+  font-size: 8rem;
+  font-family: 'Times New Roman', Times, serif;
+} 
+
+.carousel-container { 
+  margin-top: 8rem;
+}
+ 
+.carousel-item > img {
+  width: fit-content;
+height:fit-contents;
+} 
+ 
+.carousel-caption { 
+  background-color: #fb783cc6;
+  font-size: 2rem;
+} 
+ 
+.carousel-control-next-icon , .carousel-control-prev-icon {
+  background-color: #0877ff; 
+  color: #0069ea;
+  border-radius: 5px solid #f5f5f5;
+} 
+ 
+.x-highlight {
+  justify-content: center;
+ display: inline-block;
+ width: auto;
+ border-radius: 1rem;
+  margin-bottom: 21PX;
+  background-color:#5c0390;
+  color:whitesmoke;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 4REM;
+} 
+ 
+#projects { 
+  margin-top: 5rem;
+} 
+
+
+.list-group-item:hover { 
+  background-color: #fb783cc6;
+  color: whitesmoke;
+  border-radius: 1rem ;
+}
+ 
+.p-3:hover { 
+  border:2px solid salmon !important;
+  padding: 5px;
+}
+
+.card:hover , .p-3:hover , .list-group-item:hover {
+  padding: 0.5rem;
+ color: whitesmoke;
+  background-color:salmon; 
+   border-radius: 1rem;
+ }
+
+#footer {
+  margin-top:  5rem;
+}
+
+
+.social-icons  li:hover { 
+  background-color:#f5f5f5;
+  border-radius: 100%;
+}
