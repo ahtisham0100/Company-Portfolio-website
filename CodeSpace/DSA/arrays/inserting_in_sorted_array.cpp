@@ -3,33 +3,22 @@
 using namespace std; 
 
 
+int searchInsert(vector<int>& nums, int target) {
 
-int search(vector<int> nums, int target ){ 
-
-      
-int high = nums.size()-1; 
- int low = 0 ; 
-
-
- while(low<=high){
- int mid = (high+low)/2; 
-
-if(nums[mid]==target){
-    return mid; 
-} else if(nums[mid]<target){
-    low = mid+1; 
-} else { 
-    high=mid-1; 
-}   
-
-   
-
-
+int start=0;
+int end = nums.size()-1; 
+int mid ;
+while(start<=end){
+    mid = (start+end)/2; 
+    if(nums[mid]==target){
+        return mid;
+    } else if(nums[mid]<target){
+start=  mid+1; 
+    } else { 
+     end = mid-1;    
     }
- return -1;
-
-}
-
+} 
+  return (start) ; }
 
  
  int main(){ 
@@ -48,6 +37,12 @@ for (size_t i = 0; i < 100; i++)
         cout << *it <<" ";
     } 
 
+ cout<< "\n"<< searchInsert(v ,37)<< " " << endl; 
+ cout<< searchInsert(v ,38)<< " " << endl;
+ cout<< searchInsert(v ,67)<< " " << endl; 
+ cout<< searchInsert(v ,68)<< " " << endl; 
+  
+ 
 return 0;     
 }
 
