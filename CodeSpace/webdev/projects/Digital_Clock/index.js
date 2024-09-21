@@ -1,14 +1,31 @@
 
-var minute =43; 
-var second =30;
-var hours =04;
+const currentDate  = new Date(); 
+
+var minute =currentDate.getMinutes(); 
+var second =currentDate.getSeconds();
+var hours =currentDate.getHours();
   
+
 
 
 $(".mins").text(minute);
 $(".sec").text(second);
 $(".hrs").text(hours);
  
+
+$("#changeFormat").click( ()=> { 
+ 
+    let hour = $(".hrs").text(); 
+    if (hour>12) {
+        hours-=12; 
+        $(".hrs").text(hours); 
+    } else { 
+
+        hours+=12; 
+        $(".hrs").text(hour); 
+    }
+
+})
 
     $(".changeTheme").click( ()=>{
         $(".light").toggleClass("dark");
@@ -27,6 +44,8 @@ $(".hrs").text("0"+hours);
        else if (second===59) {
         $(".sec").text(second);
         second=0;
+        $(".sec").text("0"+second);
+
         minute++; 
         if (minute<10) {
  $(".sec").text(second);

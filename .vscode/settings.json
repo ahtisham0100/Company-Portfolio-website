@@ -8,5 +8,6 @@
         "ostream": "cpp",
         "stacktrace": "cpp",
         "system_error": "cpp"
-    }
+    },
+    "livePreview.defaultPreviewPath": "/CodeSpace/webdev/projects/LandingPage/index.html"
 }

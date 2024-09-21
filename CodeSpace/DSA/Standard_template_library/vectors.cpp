@@ -35,7 +35,7 @@ int main() {
     cout << "\nvector is empty";
   else
     cout << "\nvector is not empty" << endl;
-
+  
   v.clear();
   cout << "Size of the vector after clearing the vector: " << v.size();
 
