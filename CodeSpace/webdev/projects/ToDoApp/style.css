@@ -1,0 +1,106 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  background:url(/CodeSpace/webdev/projects/chessboard/assets/images/beautiful.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-color: rgba(0, 0, 0, 0.479);
+  background-blend-mode:multiply;
+} 
+ 
+.navbar { 
+text-align: center;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(99, 214, 208);
+  margin-bottom: 10vh;
+  font-variant-caps: all-small-caps;
+  font-weight: bolder;
+  font-size: x-large;
+  color: whitesmoke;
+  width: 100%;
+}
+
+.footer{
+  margin-top: 10vh; 
+  position: relative;
+  height: 10vh;
+  padding: 2rem;
+color: aliceblue;
+font-variant-caps: all-small-caps;
+font-size: x-large;
+}
+.main-section { 
+  background-color: rgba(243, 242, 243, 0.349);
+ display: flex;
+ gap: 2rem;
+ width: 100%;
+ height: auto; 
+ justify-content: center;
+
+}  
+
+.header { 
+display: flex;
+height: 10vh;
+  background-color: rgb(135, 136, 231);
+position: relative;
+width: 100%; 
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+align-items: center;
+justify-content: center;
+}
+.col { 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  align-items: center;
+}
+ 
+ 
+.completed-task-container  , .incompleted-task { 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width:80%; 
+  align-items: center;
+  justify-content: center;
+border-radius: 1rem ;
+}
+
+
+.incompleted-task { 
+  background-color: rgb(180, 124, 226);
+color: aliceblue;
+}
+.completed-task-container { 
+  background-color: sandybrown;
+}
+
+ .item { 
+  font-family:'Courier New', Courier, monospace;
+  font-size: large;
+
+ }
+
+ .btn { 
+  position: relative;
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-variant: small-caps;
+}
+ .footer-section { 
+  background-color: antiquewhite;
+  margin-top:10%;
+  width: 100vh;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

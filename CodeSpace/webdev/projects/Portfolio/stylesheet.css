@@ -1,6 +1,19 @@
  
   
 
+  .navbar{ 
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:tomato !important;
+    font-size: x-large;
+    border: 1px solid antiquewhite;
+    z-index: 1;
+border-radius: 1rem;
+
+}      
 
 
 .navbar  a {
@@ -182,5 +195,4 @@ height:fit-contents;
   top: -20px;
   transform: rotate(180deg);
   z-index: 10;
-}
 }
