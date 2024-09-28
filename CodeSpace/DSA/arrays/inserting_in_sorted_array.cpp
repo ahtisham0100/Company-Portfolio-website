@@ -37,7 +37,7 @@ for (size_t i = 0; i < 100; i++)
         cout << *it <<" ";
     } 
 
- cout<< "\n"<< searchInsert(v ,37)<< " " << endl; 
+ cout<< "\n"<< searchInsert(v ,37)<< " " << endl;  
  cout<< searchInsert(v ,38)<< " " << endl;
  cout<< searchInsert(v ,67)<< " " << endl; 
  cout<< searchInsert(v ,68)<< " " << endl; 
