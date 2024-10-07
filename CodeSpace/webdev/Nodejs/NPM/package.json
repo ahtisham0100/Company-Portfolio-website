@@ -1,0 +1,14 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "description": "this is me practisinig the npm first lesson ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Ahtisham Arif",
+  "license": "ISC",
+  "dependencies": {
+    "silly-password-generator": "^1.0.28"
+  }
+}
