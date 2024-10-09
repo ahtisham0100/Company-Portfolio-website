@@ -122,35 +122,19 @@ a=insertAtEnd(a,e3);
  cout<<"\n\nAfter inserting at the end the list is:\n\n";
 trarverse(a);
 
+//inserting a specific position
+a = insertAtPosition(a,4,e1);
+a = insertAtPosition(a,4,e1);
+a = insertAtPosition(a,4,e1);
 
 
+ cout<<"\n\nAfter inserting at the specific postion of the list is:\n\n";
+trarverse(a);
 
-//  trarverse(a);   //to print the linked list ; 
-// cout<<endl;
-// a = insertAtPosition(a,1,6);
-// trarverse(a);  
-// a=insertAtPosition(a,2,7);
-// trarverse(a);
-// a=insertAtPosition(a,3,8);
-// trarverse(a);
-// a=insertAtPosition(a,4,9);
-// trarverse(a);
-// a=insertAtPosition(a,17,12135234);
-// trarverse(a);
-// a=insertAtPosition(a,10,1545);
-// trarverse(a);
+
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
 
 
 
