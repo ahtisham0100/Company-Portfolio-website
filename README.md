@@ -1,4 +1,4 @@
-<h1> my workspace </h1>
+<h1> My Workspace </h1>
 * This repository contains code my codespace 
 <ul> 
 <h2>The code includes</h2> 
