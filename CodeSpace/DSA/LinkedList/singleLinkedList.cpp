@@ -59,11 +59,11 @@ void trarverse(Node* a );
 //lenght of linked list;
 int length(Node* head);
 //inserting at the begining;
-Node*  insertAtBeginning(Node* head , int value);
+Node*  insertAtBeginning(Node* head , eventData value);
 //inserting at the end 
-Node* insertAtEnd(Node* head, int value ); 
+Node* insertAtEnd(Node* head, eventData value ); 
 //insering at the specific position;
-Node*  insertAtPosition(Node* head , int position, int value) ;
+Node*  insertAtPosition(Node* head , int position, eventData value) ;
 
 
 
@@ -106,16 +106,24 @@ cout<<"Length of event list is :"<<length(a)<<endl;
 //inserting at the begining of single LinkedList 
  
 
-// a=insertAtBeginning(a , 200); 
-// a =  insertAtBeginning(a,300);
-// a =  insertAtBeginning(a,500);
-// a =  insertAtBeginning(a,400);
-// a =  insertAtBeginning(a,500);
+a=insertAtBeginning(a , e4); 
+a =  insertAtBeginning(a,e3);
+a =  insertAtBeginning(a,e2);
+ 
+ cout<<"\n\nAfter inserting at the beginning the list is:\n\n";
+trarverse(a);
+
 
 // //now inserting at the end ; 
-// a=insertAtEnd(a,3);
-// a=insertAtEnd(a,4);
-// a=insertAtEnd(a,5);
+a=insertAtEnd(a,e1);
+a=insertAtEnd(a,e2);
+a=insertAtEnd(a,e3);
+
+ cout<<"\n\nAfter inserting at the end the list is:\n\n";
+trarverse(a);
+
+
+
 
 //  trarverse(a);   //to print the linked list ; 
 // cout<<endl;
@@ -202,51 +210,51 @@ return count;
 
 
 
-//  //inserting at the beginning of LinkedList;
+ //inserting at the beginning of LinkedList;
   
-// Node*  insertAtBeginning(Node* head , int value){ 
+Node*  insertAtBeginning(Node* head , eventData value){ 
 
-// Node* newNode = new Node(value);
-// newNode->node=head; 
-// head=newNode;
+Node* newNode = new Node(value);
+newNode->node=head; 
+head=newNode;
 
-//     return head; 
-//   }
+    return head; 
+  }
 
 
 
 // //inserting at the end of Single LinkedList; 
 
-//   Node* insertAtEnd(Node* head, int value ){  
-// cout<<"inserting at the end \n" ;
-// //create the new node ; 
-// Node*  newNode  = new Node(value); 
+  Node* insertAtEnd(Node* head, eventData value ){  
+cout<<"inserting at the end \n" ;
+//create the new node ; 
+Node*  newNode  = new Node(value); 
 
-// //base case if head = null ; 
-// if (head==nullptr)
-// {
-//     return newNode;
-// }else {
+//base case if head = null ; 
+if (head==nullptr)
+{
+    return newNode;
+}else {
 
-// //traverse through the list at the end of list the lastNode must have a null ptr
-// //assing to that null ptr the newNode; 
+//traverse through the list at the end of list the lastNode must have a null ptr
+//assing to that null ptr the newNode; 
 
-// Node* current= head; 
+Node* current= head; 
 
-// //traversing 
-// while (current->node!=nullptr)
-// {
-//     current=current->node; 
-// }
+//traversing 
+while (current->node!=nullptr)
+{
+    current=current->node; 
+}
 
-// //now current is at the last node address; 
-// current->node =newNode; 
-// cout<<"Insertion at the end is successful \n";
+//now current is at the last node address; 
+current->node =newNode; 
+cout<<"Insertion at the end is successful \n";
 
 
-//   } 
-//   return head; 
-//   } 
+  } 
+  return head; 
+  } 
    
 
 // /**
@@ -260,50 +268,50 @@ return count;
 //  *  */     
 
 
-// Node*  insertAtPosition(Node* head , int position, int value) { 
+Node*  insertAtPosition(Node* head , int position, eventData value) { 
 
-// //if position is less than 1; 
-// if (position<1){
-// cout<<"invalid position please enter correct value"<<endl; 
-// return head;  
-// }
-// //creating a node to be inserted and a node to keep track of current node for iteration; 
-// Node* temp = new Node(value); 
-// Node* current =  head;
+//if position is less than 1; 
+if (position<1){
+cout<<"invalid position please enter correct value"<<endl; 
+return head;  
+}
+//creating a node to be inserted and a node to keep track of current node for iteration; 
+Node* temp = new Node(value); 
+Node* current =  head;
 
-// //if position =  1  we have to insert at the begining ; 
-// if (position==1)
-// {
-//     cout<<"inserting at the begining \n";
-// temp->node=head; 
-// cout<<"insertion at the beginging seccussfull \n";
-// return temp;
-// } 
+//if position =  1  we have to insert at the begining ; 
+if (position==1)
+{
+    cout<<"inserting at the begining \n";
+temp->node=head; 
+cout<<"insertion at the beginging seccussfull \n";
+return temp;
+} 
 
-// if (position>1){
-// cout<<"\ninsertion at specific position \n";
+if (position>1){
+cout<<"\ninsertion at specific position \n";
 
-// int count = 1 ; //to keep track of position for iterations till position-1;
-// while (count<position-1 && current->node!=nullptr){
-// current=current->node ;
-// count++;
-// }
+int count = 1 ; //to keep track of position for iterations till position-1;
+while (count<position-1 && current->node!=nullptr){
+current=current->node ;
+count++;
+}
  
-//  if (current->node==nullptr)   //case for inserting at the end;
-//  {
-// current->node=temp;
-// return head; 
-//  } else  { 
-//     temp->node=current->node;  //points to the next of current 
-// current->node=temp;     //current node 
+ if (current->node==nullptr)   //case for inserting at the end;
+ {
+current->node=temp;
+return head; 
+ } else  { 
+    temp->node=current->node;  //points to the next of current 
+current->node=temp;     //current node 
 
-// return head; 
-//  }
+return head; 
+ }
   
 
  
 
-// }
+}
 
 
-// }
+}
