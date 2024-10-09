@@ -64,7 +64,8 @@ Node*  insertAtBeginning(Node* head , eventData value);
 Node* insertAtEnd(Node* head, eventData value ); 
 //insering at the specific position;
 Node*  insertAtPosition(Node* head , int position, eventData value) ;
-
+/*deleting based on the value*/
+ Node* delAtPosition(Node* head , eventData value);
 
 
 
@@ -131,6 +132,14 @@ a = insertAtPosition(a,4,e1);
  cout<<"\n\nAfter inserting at the specific postion of the list is:\n\n";
 trarverse(a);
 
+a= delAtPosition(a,e1);
+a= delAtPosition(a,e1);
+a= delAtPosition(a,e1);
+a= delAtPosition(a,e1);
+
+ cout<<"\n\nAfter deletion of event  the list is:\n\n";
+
+trarverse(a);
 
 
     return 0;
@@ -298,4 +307,27 @@ return head;
 }
 
 
-}
+} 
+
+
+
+
+/**
+ * deletion 
+ */
+ Node* delAtPosition(Node* head , eventData value){ 
+  
+     Node*  current =head; 
+
+       while (current->node->data.getDetails()!=value.getDetails()) {
+cout<<current->data.getDetails()<<" ";
+current=current->node;
+  
+ }  
+       
+       
+Node*temp= current->node->node;
+delete current;
+return head;
+      
+  }
