@@ -1,0 +1,12 @@
+{
+  "name": "superheros",
+  "version": "1.0.0",
+  "description": "this generates the random random super hero name .  new thing learned in use of type = module",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Muhammad Ahtisham Arif",
+  "license": "ISC"
+}
