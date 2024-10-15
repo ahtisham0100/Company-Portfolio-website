@@ -39,6 +39,54 @@ void setPrev(node*  n){
 }
 
 
+void traverseForward(){
+    node*  temp = this;
+    while (temp!=NULL)
+    {
+        temp->evt.printDetails();
+        temp=temp->next;
+    }
+}
+
+void traverseBackward(){ 
+        node* temp =this;
+while (temp!=NULL)
+{
+    temp->evt.printDetails();
+    temp=temp->prev;
+}
+   }
+
+
+
+node* removeEvent(event e){
+
+node*  current= this;
+
+while (current!=NULL)
+{
+    if (current->evt.getTitle()==e.getTitle())
+    {
+       break;
+    }
+    current=current->next;
+}
+
+if (current==NULL)
+{
+    cout<<"Given event in not is the list \n";
+}
+
+node* temp=current->next;
+current->prev->next=temp;
+current->next->prev=temp;
+current=current->next->next;
+ delete temp;
+ 
+ return this;   
+}
+
+
 };
 
 
@@ -64,7 +112,15 @@ n3.setPrev(&n2);
 n4.setPrev(&n3);
 
 
-n1.evt.printDetails();
-n1.next->next->evt.printDetails();
+// n1.evt.printDetails();
+// n1.next->next->evt.printDetails();
+
+// n1.traverseForward();
+// n1.traverseBackward();
+
+//removing the title 
+n1.removeEvent(b);
+n1.traverseForward();
+
     return  0; 
 }
