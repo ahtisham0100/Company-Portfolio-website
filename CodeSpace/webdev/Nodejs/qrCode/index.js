@@ -1,7 +1,10 @@
-import inquirer from "inquirer"; 
-// using inquirer to get prompt from the user. 
-import  fs from "fs"; 
+// using inquirer to get prompt from the user fs to write the file and qr-image to generate the qr-code . 
 
+import inquirer from "inquirer"; 
+import  fs from "fs";  
+import qr from "qr-image"; 
+import { type } from "os";
+import { types } from "util";
 inquirer
   .prompt([
     /* Pass your questions in here */ 
@@ -15,31 +18,30 @@ inquirer
     {
         message: "enter your name",
         name: "naam"
-    }  , 
-     
-    {
-        message: "Enter the UserName ? " ,  
-        name : "username"
-    } , 
-     
-     {
-        message: "Enter the password ? " , 
-        name:"password"
-     }
+        
+    }, 
+    { 
+        message: "type of image for QR-Code : pdf , efd, png  , png ", 
+        name : "type"
+    }   
 
   ])
   .then((answers) => {
 console.log(answers); 
 
-const  data =  
+const  data =  answers.naam  + " \n" + answers.password + "\n " + answers.url + "\n" +answers.username;
 
-fs.writeFile("data.txt", answers.naam  , function (error) {
+fs.writeFile("data.txt", data  , (error)=> {
     if (error) {
         console.log(error);
     } else {
         console.log("success full") ;
     }
-}) 
+}); 
+
+const img =  qr.image(answers.url , {type:answers.type});
+img.pipe(fs.createWriteStream(answers.naam+'.png')); 
+
 
 })
   .catch((error) => {
