@@ -7,13 +7,19 @@ app.get('/' ,(req , res )=>{
     res.send(`<h1 style="padding:8px">Hello world <br>This is me Ahtisham</h1>`
     );
     
-});
+}); 
+
+app.get("/assets" ,(req, res)=>{
+    // res.send(`<h1>this is redirected</h1>`)
+res.redirect("/about");
+})
+
 
 app.get('/about' ,(req , res )=>{
+    // res.send(`<h1 style="padding:8px">About me</h1>`
+    // );
+res.redirect("/assets");
 
-    res.send(`<h1 style="padding:8px">About me</h1>`
-    );
-    
 });
 
 app.get('/contact' ,(req , res )=>{
