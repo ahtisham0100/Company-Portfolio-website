@@ -48,7 +48,8 @@ min=date.getHours();
     req.requestTime = `requst Time:${hr}:${min}:${sec}`; 
     console.log(req.requestTime);  
 
-    fs.appendFileSync("public/requests.txt" , `${req.requestTime}   request source ${req.method} \n`)
+
+fs.appendFileSync("public/requests.txt" , `${req.requestTime}   request source ${req.method}   ${req.params}  ${req.headers}\n  `)
 
     next()
   } 
