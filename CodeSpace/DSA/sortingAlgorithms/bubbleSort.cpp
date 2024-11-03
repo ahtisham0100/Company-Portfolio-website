@@ -61,6 +61,7 @@ int len = listLength(head);
 cout<<"\nlength inside the sort al is : " <<len<<endl;
 
 Node* current =  head;  
+
     for(int i= 0;  i<len-1; i++){
 
         Node* Next= current->next;
