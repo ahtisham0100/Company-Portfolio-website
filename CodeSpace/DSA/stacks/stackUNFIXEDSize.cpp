@@ -7,13 +7,16 @@ using namespace std;
  *      POP IS REMOVING THE TOP ITEM 
  *      PUSH IS PUSHING TO THE TOP ITEM
  
-
+using the stacks;  
+1. when we want to store the data to use it later
+2.Back pages onthe web pages are based on the implementation of stack
+3. converting the recursion programs into iterative programs. (sir kunal will teach this later)
 
  */
 
 
  class Stack{
-
+private:
 vector<int> stack; 
 
  public:
