@@ -6,9 +6,11 @@ using namespace std;
 
 
 class arrayStack{ 
+ protected: 
+ static const int width=10;
 
 protected:
-int data[10]; 
+int data[arrayStack::width]; 
 protected:
 int ptr= -1;  //initially points to -1 index of stack; 
 

@@ -14,6 +14,8 @@ using the stacks;
 
  */
 
+//stack using vecor for undefined size; 
+//if we implement it using array it will have fixed size; 
 
  class Stack{
 private:

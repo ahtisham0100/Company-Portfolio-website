@@ -16,6 +16,7 @@ a[j]=temp;
       if (!swap)
       {
         cout<<"loop broke at iteration number " <<  i+1<<endl;
+        
 break;
       }
         

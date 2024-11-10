@@ -27,7 +27,8 @@
         "ranges": "cpp",
         "span": "cpp",
         "regex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "new": "cpp"
     },
     "livePreview.defaultPreviewPath": "/CodeSpace/webdev/projects/LandingPage/index.html"
 }
