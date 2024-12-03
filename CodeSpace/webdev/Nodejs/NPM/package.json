@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "this is me practisinig the npm first lesson ",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

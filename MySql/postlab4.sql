@@ -173,8 +173,120 @@ VALUES
 
 ('Jack', 'Wilson', 'Male', '1996-10-30', 'jack.wilson@example.com', '123-456-7899', '2023-09-01', 'Content Writer', 'Content', 60000.00, 7);
 
+INSERT INTO employee (first_name, last_name, gender, date_of_birth, email, phone_number, hire_date, job_title, department, salary, manager_id)
+VALUES 
+('Anna', 'Green', 'Female', '1991-01-15', 'anna.green@example.com', '123-456-7810', '2022-07-15', 'Junior Developer', 'Engineering', 55000.00, 1),
+('John', 'Doe', 'Male', '1993-08-21', 'john.doe@example.com', '123-456-7811', '2023-03-20', 'Software Engineer', 'Engineering', 75000.00, 1),
+('Jane', 'Smith', 'Female', '1992-12-10', 'jane.smith@example.com', '123-456-7812', '2021-11-05', 'Data Scientist', 'Data Science', 95000.00, 2),
+('Mark', 'Johnson', 'Male', '1995-02-19', 'mark.johnson@example.com', '123-456-7813', '2022-08-30', 'UX Researcher', 'Design', 65000.00, 5),
+('Emily', 'Davis', 'Female', '1989-06-25', 'emily.davis@example.com', '123-456-7814', '2021-04-10', 'Product Manager', 'Product', 105000.00, 2),
+('Luke', 'Brown', 'Male', '1990-11-05', 'luke.brown@example.com', '123-456-7815', '2020-09-18', 'Accountant', 'Finance', 72000.00, NULL),
+('Sophia', 'Wilson', 'Female', '1988-05-17', 'sophia.wilson@example.com', '123-456-7816', '2019-12-20', 'Marketing Manager', 'Marketing', 85000.00, 7),
+('Mia', 'Moore', 'Female', '1994-03-10', 'mia.moore@example.com', '123-456-7817', '2021-07-29', 'Sales Representative', 'Sales', 53000.00, 8),
+('Noah', 'Taylor', 'Male', '1996-01-22', 'noah.taylor@example.com', '123-456-7818', '2022-05-14', 'HR Assistant', 'Human Resources', 45000.00, 4),
+('Lily', 'Clark', 'Female', '1997-04-15', 'lily.clark@example.com', '123-456-7819', '2023-06-10', 'Marketing Specialist', 'Marketing', 62000.00, 7),
+('James', 'Lee', 'Male', '1985-09-10', 'james.lee@example.com', '123-456-7820', '2018-11-22', 'Backend Developer', 'Engineering', 80000.00, 1),
+('Charlotte', 'Evans', 'Female', '1994-07-05', 'charlotte.evans@example.com', '123-456-7821', '2020-02-12', 'Data Analyst', 'Data Science', 72000.00, 3),
+('Oliver', 'Thomas', 'Male', '1992-03-14', 'oliver.thomas@example.com', '123-456-7822', '2021-01-25', 'UI Designer', 'Design', 67000.00, 5),
+('Ava', 'Walker', 'Female', '1991-09-25', 'ava.walker@example.com', '123-456-7823', '2019-07-15', 'Finance Manager', 'Finance', 94000.00, NULL),
+('Henry', 'Hall', 'Male', '1995-10-30', 'henry.hall@example.com', '123-456-7824', '2023-02-18', 'Sales Manager', 'Sales', 75000.00, 8),
+('Isabella', 'Young', 'Female', '1993-11-09', 'isabella.young@example.com', '123-456-7825', '2020-03-14', 'Graphic Designer', 'Design', 60000.00, 5),
+('Daniel', 'Allen', 'Male', '1990-04-29', 'daniel.allen@example.com', '123-456-7826', '2019-05-08', 'Business Analyst', 'Product', 86000.00, 2),
+('Ella', 'King', 'Female', '1989-08-12', 'ella.king@example.com', '123-456-7827', '2022-09-30', 'HR Manager', 'Human Resources', 69000.00, NULL),
+('Samuel', 'Scott', 'Male', '1994-02-27', 'samuel.scott@example.com', '123-456-7828', '2021-06-22', 'Operations Specialist', 'Operations', 72000.00, NULL),
+('Olivia', 'Carter', 'Female', '1987-10-19', 'olivia.carter@example.com', '123-456-7829', '2017-01-15', 'Technical Lead', 'Engineering', 97000.00, 1);
+
+INSERT INTO employee (first_name, last_name, gender, date_of_birth, email, phone_number, hire_date, job_title, department, salary, manager_id)
+VALUES 
+('Ana', 'Gren', 'Female', '1991-01-15', 'anna.green@example.m', '123-456-7810', '2022-07-15', 'Junior Developer', 'Eng', 55000.00, 1);
+
+select avg(salary) from employee;
  
- select * from employee 
- having salary>avg(salary);
- select avg(salary) from employee;
+update employee
+ set salary  =  salary + (0.5 * salary)
+ where salary < (
+ select avg(salary) from employee ) ;
     
+    set sql_safe_updates=0;  
+     
+      update  employee 
+      set salary=97000
+      where first_name="Frank" and last_name="Garcia";
+      select * from employee 
+      group by department; 
+          
+           
+            
+             -- select from employee who are not in the listed department; 
+             
+             select * from 
+             employee 
+             where department not in  ( 
+             select  distinct department_name from 
+             department
+             ) ; 
+            
+             
+              
+               
+                --  each department employees with salary >  average salary ; 
+                 
+                    -- depart 
+                 SELECT *
+FROM employee e
+WHERE e.salary > (
+    SELECT AVG(salary)
+    FROM employee
+    WHERE department = e.department
+);
+ 
+  
+   
+   select *  from 
+    employee e
+   where e.salary >  ( 
+     select avg(salary)  from employee where 
+     department = e.department
+     );  
+      
+       
+        select departent  , salary , avg(salary)  from employee where 
+     department = e.department;
+                
+                select department , salary ,  avg(salary) from  employee
+                      where salary > avg(salary);
+                
+                  
+                   select * from
+                   employee 
+                  having salary > (
+                   select avg(salary) as average from employee );
+                 
+             SELECT 
+    *
+FROM
+    employee e
+WHERE
+    salary > (SELECT 
+            AVG(salary)
+        FROM
+            employee
+        WHERE
+            department = e.department);
+              
+         show databases;
+         use lab4;
+        select *  from employee  
+        where (department,salary)  in (
+        select department , max(salary) 
+        from employee group by department);   
+         
+          create table department ( 
+          
+		dpt_let int primary key , 
+        department_name varchar(20) 
+           
+           );            
+             
+             desc department;
+             insert into department (dpt_let , department_name) values (1,"Design") , (2,"Engineering") , (3,"Content");

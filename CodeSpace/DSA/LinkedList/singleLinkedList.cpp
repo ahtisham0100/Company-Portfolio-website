@@ -286,7 +286,7 @@ cout<<"\ninsertion at specific position \n";
 
 int count = 1 ; //to keep track of position for iterations till position-1;
 while (count<position-1 && current->node!=nullptr){
-current=current->node ;
+current=current->node;
 count++;
 }
  
