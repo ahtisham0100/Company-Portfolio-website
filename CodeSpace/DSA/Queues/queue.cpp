@@ -16,13 +16,17 @@ public:
     return (front == -1 && rear == -1 );
   }
 
+
+
+
   void enque(int data)
   {
 
-    if (isFull())
+    if (rear == size-1)
     {
 
-      cout << "Queue is full ";
+      cout << "Queue is full, Operation can't be performed . \n ";
+    return;
     }
 
     if (isEmpty())
@@ -33,6 +37,7 @@ public:
     else
     {
       Queue[++rear] = data;
+      cout<<"inserted now :"<<data<<"at index " <<rear<<"\n";
     }
   }
 
@@ -105,10 +110,13 @@ int main()
   a.dequeue();
   a.display();
 
-for (int i = 0; i <= 10; i++)
+for (int i = 0; i <= 15; i++)
 {
   a.enque(i);
 }
+
+std::cout<< "\nfront: "<<a.peak() << " \n pop : " <<a.Pop() << "\nis empty : " << a.isEmpty() << "\nIsFull :"<<a.isFull()<<"\n";  
+a.display(); 
 
 
   return 0;
