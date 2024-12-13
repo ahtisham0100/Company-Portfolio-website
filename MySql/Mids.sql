@@ -8,7 +8,9 @@ CREATE TABLE student (
     dob DATE,
     did INT
 );
- 
+  
+  use college ; 
+  show tables;
    
    CREATE TABLE course (
     code INT PRIMARY KEY,
@@ -98,7 +100,6 @@ INSERT INTO std_course (sid, coursecode, credhours) VALUES
     
      
 
-select * from student;
      --  Display department id that has max number of student enrolled 
      select did , count(did) as maxstudents from student 
      group by did order by did limit 1  ;
@@ -110,7 +111,13 @@ select * from student;
        where  sid not  in ( 
        select  sid from std_course
        ) ;
-      
+        
+          select * from student 
+          order by cgpa desc;
+	
+    
+    select * from student  
+          order by cgpa desc limit 1 offset 2;
       
        
        

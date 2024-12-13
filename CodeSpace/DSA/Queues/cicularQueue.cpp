@@ -19,7 +19,7 @@ public:
   void enque(int data)
   {
  //check if queue is full
-    if (rear == size-1)
+    if (isFull())
     {
       cout << "Queue is full !\n "; 
     return;
