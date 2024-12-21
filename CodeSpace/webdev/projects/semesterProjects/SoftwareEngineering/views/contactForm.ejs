@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Requests</title> 
+     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>  
+
+body { 
+    
+        color: #47503a;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 6rem;
+    background-color:#659287;
+}
+    table { 
+        text-align: center;
+        color: #47503a !important;
+       
+
+    }  
+
+    tr:nth-child(odd){ 
+        background-color: rgba(255, 248, 248, 0.342);
+    }
+     tr:nth-child(even){
+        background-color: rgba(250, 235, 215, 0.664);
+     }
+
+     .navbar { 
+    border-bottom: 1px solid #525B44;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+height: auto;
+font-size: 20px;
+} 
+
+
+.card{
+    color: #525B44;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow:5px 5px 15px rgba(0, 0, 0, 0.644);
+} 
+ 
+</style>
+</head>
+<body>
+ 
+    <div class="navbar card">        <h1>Contact Requests</h1>
+    </div>
+    <div class="container"> 
+
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Message</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Zip Code</th>
+                    <th scope="col">State/Province</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(function(item) { %>
+                    <tr scope="row">
+                        <td><%= item.fullname %></td>
+                        <td><%= item.email %></td>
+                        <td><%= item.message %></td>
+                        <td><%= item.address %></td>
+                        <td><%= item.city || 'N/A' %></td>
+                        <td><%= item.zip %></td>
+                        <td><%= item.state %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Contact Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	</head>
+	<body> 
+
+		<div class="container">  
+			<span class="container page-title">Contact Us </span>
+		<h6 class="caption">*Leave your Message , We'll get back to you soon!</h6>
+			<form method="post" action="contact-us/message">
+			<div class="form-row">
+
+				<div class="form-group col-md-6">
+					<label for="name">Name</label>
+					<input type="text" required name="name" class="form-control" id="inputEmail4" placeholder="Name">
+				  </div>
+			  <div class="form-group col-md-6">
+				<label for="inputEmail4">Email</label>
+				<input type="email" required name="email" class="form-control" id="inputEmail4" placeholder="Email">
+			  </div>
+			  
+			</div>
+			<div class="form-group">
+			  <label for="message">Your message</label>
+			  <input type="text" required name="message" class="form-control" id="inputAddress" placeholder="">
+			</div>
+			<div class="form-row">
+
+				<div class="form-group col-md-6">
+					<label for="inputCity">Address</label>
+					<input type="text" name="address" class="form-control" id="address">
+				  </div>
+
+			  <div class="form-group col-md-6">
+				<label for="inputCity">City</label>
+				<input type="text" name="city" class="form-control" id="inputCity">
+			  </div>
+			  <div class="form-group col-md-4">
+				<label for="inputState">State / Province</label>
+				<select id="inputState" name="State" class="form-control">
+				  <option selected>Punjab</option>
+				  <option >Sindh</option>
+				  <option >Balochistan</option>
+				  <option >KPK</option>
+				  <option >AJK</option>
+				  <option >Gilgit Baltistan</option>
+				</select>
+			  </div>
+			  <div class="form-group col-md-2">
+				<label for="inputZip">Zip</label>
+				<input name="postalcode" type="text" class="form-control" id="inputZip">
+			  </div>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		  </form>
+		</div>
+	<script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+
+	</body>
+</html>
+
