@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <title><%= project ? 'Edit Project' : 'Add Project' %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1><%= project ? 'Edit Project' : 'Add Project' %></h1>
+
+        <form action="/projects/save" method="POST">
+            <% if (project) { %>
+                <input type="hidden" name="project_id" value="<%= project.project_id %>">
+            <% } %>
+
+            <!-- Project Name -->
+            <div class="mb-3">
+                <label for="project_name" class="form-label">Project Name:</label>
+                <input type="text" class="form-control" id="project_name" name="project_name" value="<%= project ? project.project_name : '' %>" required>
+            </div>
+
+            <!-- Description -->
+            <div class="mb-3">
+                <label for="description" class="form-label">Description:</label>
+                <textarea class="form-control" id="description" name="description" required><%= project ? project.description : '' %></textarea>
+            </div>
+
+            <!-- Start Date -->
+            <div class="mb-3">
+                <label for="start_date" class="form-label">Start Date:</label>
+                <input type="date" class="form-control" id="start_date" name="start_date" value="<%= project ? project.start_date : '' %>" required>
+            </div>
+
+            <!-- Status -->
+            <div class="mb-3">
+                <label for="status" class="form-label">Status:</label>
+                <select class="form-control" id="status" name="status">
+                    <option value="In Progress" <%= project && project.status === 'In Progress' ? 'selected' : '' %>>In Progress</option>
+                    <option value="Completed" <%= project && project.status === 'Completed' ? 'selected' : '' %>>Completed</option>
+                    <option value="Delayed" <%= project && project.status === 'Delayed' ? 'selected' : '' %>>Delayed</option>
+                </select>
+            </div>
+
+            <!-- Client -->
+            <div class="mb-3">
+                <label for="client_id" class="form-label">Client:</label>
+                <select class="form-control" id="client_id" name="client_id" required>
+                    <% clients.forEach(client => { %>
+                        <option value="<%= client.client_id %>" <%= project && project.client_id === client.client_id ? 'selected' : '' %>>
+                            <%= client.client_name %>
+                        </option>
+                    <% }); %>
+                </select>
+            </div>
+
+            <!-- Financial Status -->
+            <div class="mb-3">
+                <label for="financial_status" class="form-label">Financial Status:</label>
+                <select class="form-control" id="financial_status" name="financial_status">
+                    <option value="Pending" <%= project && project.financial_status === 'Pending' ? 'selected' : '' %>>Pending</option>
+                    <option value="Settled" <%= project && project.financial_status === 'Settled' ? 'selected' : '' %>>Settled</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">
+                <%= project ? 'Update' : 'Add' %> Project
+            </button>
+        </form>
+    </div>
+</body>
+</html>

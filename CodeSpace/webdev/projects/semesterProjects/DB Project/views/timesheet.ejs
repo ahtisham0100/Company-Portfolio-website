@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timesheet Management</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center">Timesheet Management</h1>
+
+        <!-- Form to Add Timesheet Entry -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h4>Add Timesheet Entry</h4>
+                <form action="/timesheet/update" method="post">
+                    <!-- Project Dropdown -->
+                    <div class="mb-3">
+                        <label for="project_id" class="form-label">Select Project:</label>
+                        <select name="project_id" id="project_id" class="form-select" required>
+                            <option value="" disabled selected>-- Select Project --</option>
+                            <% projects.forEach(project => { %>
+                                <option value="<%= project.project_id %>">
+                                    <%= project.project_name %> (Client: <%= project.client_name %>, Project ID: <%= project.project_id %>)
+                                </option>
+                            <% }); %>
+                        </select>
+                    </div>
+
+                    <!-- Employee Dropdown -->
+                    <div class="mb-3">
+                        <label for="employee_id" class="form-label">Select Employee:</label>
+                        <select name="employee_id" id="employee_id" class="form-select" required>
+                            <option value="" disabled selected>-- Select Employee --</option>
+                            <% employees.forEach(employee => { %>
+                                <option value="<%= employee.employee_id %>">
+                                    <%= employee.employee_name %> (ID: <%= employee.employee_id %>)
+                                </option>
+                            <% }); %>
+                        </select>
+                    </div>
+
+                    <!-- Hours Worked -->
+                    <div class="mb-3">
+                        <label for="hours" class="form-label">Hours Worked:</label>
+                        <input type="number" name="hours" id="hours" class="form-control" min="1" required>
+                    </div>
+
+                    <!-- Date Worked -->
+                    <div class="mb-3">
+                        <label for="date_worked" class="form-label">Date Worked:</label>
+                        <input type="date" name="date_worked" id="date_worked" class="form-control" required>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Add Timesheet Entry</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Existing Timesheet Entries -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h4>Existing Timesheet Entries</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Timesheet ID</th>
+                            <th>Project</th>
+                            <th>Client</th>
+                            <th>Employee</th>
+                            <th>Hours Worked</th>
+                            <th>Date Worked</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% timesheets.forEach(timesheet => { %>
+                            <tr>
+                                <td><%= timesheet.timesheet_id %></td>
+                                <td><%= timesheet.project_name %> (ID: <%= timesheet.project_id %>)</td>
+                                <td><%= timesheet.client_name %> (ID: <%= timesheet.client_id %>)</td>
+                                <td><%= timesheet.employee_name %> (ID: <%= timesheet.employee_id %>)</td>
+                                <td><%= timesheet.hours %></td>
+                                <td><%= new Date(timesheet.date_worked).toLocaleDateString() %></td>
+                            </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
